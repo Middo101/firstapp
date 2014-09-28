@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div class="col-md-4">
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Hobbies:</strong>
+  <%= @profile.hobbies %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @profile.dob %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
+</div>
+<div class ="col-md-4">
+	<%= render "status_updates/form" %>
+	<hr>
+		<% @status_updates.each do |update| %>
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<p class="panel-title"><%= update.title %>
+					<span class="pull right">
+						Posted by: <%= update.user.profile.name %>
+						on <%=update.created_at.strftime('%H:%M')%>
+					</span>
+				</p>
+			</div>
+	</div>
+	<% end %>		
+</div>
+

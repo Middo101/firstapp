@@ -1,0 +1,46 @@
+<div>
+
+<h1><strong>MixMemory<span style="color: blue">MixMemory </span>page</strong></h1>
+<h2><li><%= @Greeting [0] + @Greeting [1] %> </li></h2>
+<hr>
+<p>MixMemory</p>
+<img src="http://www.mixmemory.com/img/ipad-screen.png">
+<p style="font-family: Arial">Find me @ www.mixmemory.com</p>
+
+<a href="http://www.mixmemory.com">"MixMemory"</a>
+
+<ul> 
+<li><%=@animal[0]%></li>
+<li><%=@animal[1]%></li>
+<li><%=@animal[2]%></li>
+<li><%=@animal[3]%></li>
+</ul>	
+	<li>ANDREW <strong><em>MIDDLETON</em></strong> Likes</li>
+		<% @animal.each do |a| %>
+		<li>
+	    <%= a %>
+		</li>
+	<% end %>
+</ul>
+	<ol> 
+
+		<li>DJing</li>
+		<li>Producing</li>
+		<li>GIRLS!!!</li>
+	</ol>	
+	
+<table class="table table-hover"> 
+	<tr>
+		<th>Name</th>
+		<th>DOB</th>
+		<th>Email</th>
+	</tr>
+	<tr>
+	<ol>	
+		<td>Andrew</td>
+		<td>09/10/85</td>
+		<td>middleton_@hotmail.com</td>
+	</ol>
+		</tr>
+</table>
+	
